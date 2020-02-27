@@ -1,0 +1,74 @@
+/* new default */
+:root {
+    --orange-color: #ff692f;
+}
+
+/* style */
+main {
+    min-height: 100vh;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #21202073;
+    z-index: 1;
+}
+
+main > .container {
+    z-index: 10;
+    position: relative;
+}
+
+.bu_tap-title {
+    text-decoration: none !important;
+    border-bottom-width: 0px !important;
+    transition: .1s all linear;
+}
+
+.bu_tap-title:hover,
+.bu_tap-title.active {
+    border-bottom-width: 10px !important;
+}
+
+form [type="submit"] {
+    height: 38px;
+    line-height: 1;
+    background-color: var(--orange-color);
+}
+
+form input {
+    padding-left: 32px !important;
+}
+
+.bu_icon {
+    display: block;
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 7px;
+}
+
+.bu_icon.custom-svg {
+    margin-top: 11px;
+    margin-left: 11px;
+}
+
+.bu_icon svg {
+    width: 24px !important;
+    height: 24px !important;
+}
+
+/* media */
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    form [type="submit"] {
+        padding: 0;
+    }
+}
