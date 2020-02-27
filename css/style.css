@@ -1,6 +1,7 @@
 /* new default */
 :root {
     --orange-color: #ff692f;
+    --transition: .1s all linear;
 }
 
 /* style */
@@ -31,12 +32,16 @@ main > .container {
 .bu_tap-title {
     text-decoration: none !important;
     border-bottom-width: 0px !important;
-    transition: .1s all linear;
+    transition: var(--transition);
 }
 
 .bu_tap-title:hover,
 .bu_tap-title.active {
     border-bottom-width: 10px !important;
+}
+
+form {
+    position: relative;
 }
 
 form [type="submit"] {
@@ -64,6 +69,44 @@ form input {
 .bu_icon svg {
     width: 24px !important;
     height: 24px !important;
+}
+
+/* api data container */
+#bu_show-data {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 100%;
+}
+
+#bu_show-data ul {
+    display: none;
+    overflow-y: auto;
+    max-height: 200px;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none;
+    background-color: white;
+    border-radius: 3px;
+}
+
+#bu_show-data > .active {
+    display: block;
+}
+
+#bu_show-data li {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+#bu_show-data li:nth-child(odd) {
+    background-color: #eee;
+}
+
+#bu_show-data li:hover {
+    background-color: #ddd;
 }
 
 /* media */
