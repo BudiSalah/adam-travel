@@ -85,19 +85,21 @@ form input {
     max-height: 200px;
     padding: 0 !important;
     margin: 0 !important;
+    margin-left: -5px !important;
     list-style: none;
     background-color: white;
     border-radius: 3px;
 }
 
-#bu_show-data > .active {
-    display: block;
+#bu_show-data .bu_arrival-output {
+    margin-left: 16.666667% !important;
 }
 
 #bu_show-data li {
     cursor: pointer;
     padding: 8px;
     border-radius: 3px;
+    word-break: break-word;
     transition: var(--transition);
 }
 
@@ -113,5 +115,18 @@ form input {
 @media screen and (max-width: 1199px) and (min-width: 992px) {
     form [type="submit"] {
         padding: 0;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #bu_show-data .bu_arrival-output {
+        margin-left: 50% !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #bu_show-data .bu_arrival-output {
+        margin-left: -5px !important;
+        margin-top: 54px !important;
     }
 }
